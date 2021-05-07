@@ -1,0 +1,2 @@
+export const SETGAMEBOARD = "SETGAMEBOARD";
+export const DELETECELLS = "DELETECELLS";
