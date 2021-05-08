@@ -32,7 +32,9 @@ const CardTemplate = () => {
       });
       if (clickCounter === 2) {
         if (colorCards[0].color === colorCards[1].color) {
-          dispatch({ type: "DELETECELLS", payload: colorCards });
+          if (colorCards[0].id !== colorCards[1].id) {
+            dispatch({ type: "DELETECELLS", payload: colorCards });
+          }
         }
         const cards = document.querySelectorAll(".card");
         setTimeout(() => {
